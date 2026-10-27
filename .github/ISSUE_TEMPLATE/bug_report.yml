@@ -1,0 +1,61 @@
+name: Report a problem
+description: Something in Live Element for OBS isn't working as expected.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Issues here are **public**, so please don't include passwords, OBS links (they contain your OBS WebSocket password) or private page addresses.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Which site or element (a general description is fine), and what you clicked.
+      placeholder: |
+        1. Open YouTube Music
+        2. Pick the player bar
+        3. Click Add to OBS → …
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part?
+      options:
+        - Picking or capturing an element
+        - Add to OBS / OBS connection
+        - Live updates
+        - Tab audio
+        - Background color
+        - Trial / Pro / payment
+        - Setup guide
+        - Something else
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      description: Filled in automatically when opened from the extension.
+  - type: input
+    id: plan
+    attributes:
+      label: Plan
+      description: Filled in automatically when opened from the extension.
+  - type: input
+    id: obs-version
+    attributes:
+      label: OBS Studio version
+      placeholder: e.g. 31.0.2
+  - type: textarea
+    id: console
+    attributes:
+      label: Error messages (optional)
+      description: Any red text from the popup, or lines starting with [OEI] from the extension's service worker console.
+      render: text

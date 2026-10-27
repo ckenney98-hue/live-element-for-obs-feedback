@@ -1,0 +1,27 @@
+name: Request a feature
+description: An idea that would make Live Element for OBS better for your stream.
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+      description: Describe the feature, and what you'd use it for on stream.
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: How do you do this today? (optional)
+      description: Any workaround you use now.
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      description: Filled in automatically when opened from the extension.
+  - type: input
+    id: plan
+    attributes:
+      label: Plan
+      description: Filled in automatically when opened from the extension.
